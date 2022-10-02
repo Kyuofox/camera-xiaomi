@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 /*
  * Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #ifndef _CAM_MEM_MGR_H_
@@ -11,7 +12,7 @@
 #include <media/cam_req_mgr.h>
 #include "cam_mem_mgr_api.h"
 
-#define CAM_MEM_BUFQ_MAX 1024
+#define CAM_MEM_BUFQ_MAX 1536
 
 /* Enum for possible mem mgr states */
 enum cam_mem_mgr_state {

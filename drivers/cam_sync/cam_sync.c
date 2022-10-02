@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #include <linux/init.h>
@@ -294,6 +295,12 @@ int cam_sync_merge(int32_t *sync_obj, uint32_t num_objs, int32_t *merged_obj)
 
 	if (num_objs <= 1) {
 		CAM_ERR(CAM_SYNC, "Single object merge is not allowed");
+		return -EINVAL;
+	}
+
+	if (cam_sync_validate_sync_objects(sync_obj, num_objs)) {
+		CAM_ERR(CAM_SYNC,
+			"The objects passed for merge are not valid");
 		return -EINVAL;
 	}
 
