@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.
- * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #include <linux/module.h>
@@ -692,7 +691,6 @@ map_hw_fail:
 	cam_mem_put_slot(idx);
 slot_fail:
 	dma_buf_put(dmabuf);
-	// xiaomi add
 	fput(dmabuf->file);
 	put_unused_fd(fd);
 	return rc;

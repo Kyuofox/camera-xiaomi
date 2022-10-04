@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
- * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #include <linux/module.h>
@@ -125,7 +124,7 @@ static int __cam_fd_ctx_flush_dev_in_activated(struct cam_context *ctx,
 
 	rc = cam_context_flush_dev_to_hw(ctx, cmd);
 	if (rc)
-		CAM_ERR(CAM_FD, "Failed to flush device, rc=%d", rc);
+		CAM_ERR(CAM_ICP, "Failed to flush device, rc=%d", rc);
 
 	return rc;
 }

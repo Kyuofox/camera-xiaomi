@@ -1,7 +1,6 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 /*
  * Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
- * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #ifndef _CAM_CCI_DEV_H_
@@ -272,7 +271,7 @@ struct cam_sensor_cci_client {
 	uint16_t retries;
 	uint16_t id_map;
 	uint16_t cci_device;
-	uint16_t disable_optmz; //xiaomi add the flag to disable CCI optimization
+	uint16_t disable_optmz;
 };
 
 struct cam_cci_ctrl {
