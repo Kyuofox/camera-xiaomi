@@ -170,7 +170,8 @@ enum cam_eeprom_packet_opcodes {
 enum cam_ois_packet_opcodes {
 	CAM_OIS_PACKET_OPCODE_INIT,
 	CAM_OIS_PACKET_OPCODE_OIS_CONTROL,
-	CAM_OIS_PACKET_OPCODE_OIS_GETDATA
+	CAM_OIS_PACKET_OPCODE_OIS_GETDATA,
+	CAM_OIS_PACKET_OPCODE_TELEOIS_GETDATA
 };
 
 enum msm_bus_perf_setting {
